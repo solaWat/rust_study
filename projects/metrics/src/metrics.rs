@@ -10,7 +10,7 @@ async fn health() -> HttpResponse {
 #[actix_web::main]
 pub async fn main() -> std::io::Result<()> {
     let mut labels = HashMap::new();
-    labels.insert("application".to_string(), "kfcore".to_string());
+    labels.insert("application".to_string(), "solawat".to_string());
     let prometheus = PrometheusMetricsBuilder::new("api")
         .endpoint("/metrics")
         .const_labels(labels)
